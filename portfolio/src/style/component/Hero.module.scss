@@ -1,0 +1,23 @@
+@import "../../style/index.scss";
+
+.main_img{
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main_title{
+    font-size: 2rem;
+    @include dFlex;
+    flex-direction: column;
+}
+
+@include tabletSize{
+    .container{
+        @include dFlex;
+        flex-direction: row-reverse;
+        & > *{
+            flex-basis: 100%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../style/index.scss";
+
+.nav{
+    @include dFlex(space-around);
+    
+    .logo{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .linkContainer{
+        @include dFlex
+    }
+    
+    .links{
+        padding: 1.5rem;
+        font-size: $navLinkFontSize-sm;
+        color: $linkColor;
+    }
+}
+
+
+

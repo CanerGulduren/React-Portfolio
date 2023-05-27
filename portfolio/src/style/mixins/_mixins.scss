@@ -1,0 +1,13 @@
+@import "../variables/index.scss";
+
+@mixin dFlex($justify: center, $align: center){
+   display: flex; 
+   justify-content: $justify;
+   align-items: $align;
+}
+
+@mixin tabletSize{
+   @media(min-width: $tablet) {
+      @content
+   }
+}
