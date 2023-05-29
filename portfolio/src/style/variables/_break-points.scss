@@ -1,2 +1,7 @@
-$tablet: 600px;
-$desktop: 900px;
+$tablet: 800px;
+$desktop: 1200px;
+
+:export{
+    desktop: $desktop;
+    mobile: $tablet;
+}

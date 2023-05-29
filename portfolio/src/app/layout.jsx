@@ -1,8 +1,10 @@
-import Navbar from "@/component/Navbar/Navbar";
+
+import Navbar from "@/component/navbar/Navbar";
 import "./global.scss";
 import { Nunito } from 'next/font/google';
+import { Providers } from "@/redux/services/provider";
  
-const kanit = Nunito({
+const nunito = Nunito({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -11,11 +13,14 @@ const kanit = Nunito({
  
 export default function RootLayout({ children }) {
  return (
-    <html lang="en" className= {kanit.className}>
+  
+    <html lang="en" className= {nunito.className}>
       <body>
+      <Providers>
       <Navbar />
         {children}
-        </body>
+      </Providers>
+      </body>
     </html>
   )
 }

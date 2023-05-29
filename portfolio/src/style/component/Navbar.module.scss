@@ -1,23 +1,77 @@
 @import "../../style/index.scss";
 
 .nav{
-    @include dFlex(space-around);
+    @include dFlex(space-between);
+    padding-inline: 1rem;
     
     .logo{
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .linkContainer{
-        @include dFlex
+        display: none;
     }
-    
+
+    .mobileLinkContainer,
+    .mobileLinkContainer span,
+    .mobileLinks{
+        @include dFlex;
+    }
+
+    .mobileLinkContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 300ms ease;
+        background-color: #fff;
+        & :first-child{
+        flex-direction: column;
+        }
+        & span{
+            margin-top: 1rem;
+            padding: 1.5rem;
+            border-bottom: 2px solid black;
+        }
+        .quitMenuIcon{
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
     .links{
-        padding: 1.5rem;
-        font-size: $navLinkFontSize-sm;
+        padding: 1.5rem 2rem;
+        font-size: $navLinkFontSize-md;
         color: $linkColor;
     }
+    
+    .menuIcon{
+        width: 2rem;
+        height: 2rem;
+        padding: 1.5rem;
+    }
+
+    @include tabletSize{
+        &{
+           justify-content: space-around;
+        }
+        .linkContainer{
+            @include dFlex;
+        }
+        .menuIcon{
+            display: none;
+        }
+    }
 }
+
+
+
+
 
 
 
