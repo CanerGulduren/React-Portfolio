@@ -1,12 +1,11 @@
 "use client"
 import Image from "next/image";
 import NavLinks from "./NavLinks";
-import logo from "../../public/logo_light.png";
+import logo from "../../public/logo.png";
 import style from "../../style/component/Navbar.module.scss";
 import navLinks from "../../app/(data)/navLinks.js";
 import { useRouter } from 'next/navigation';
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { btnClick } from "../../redux/features/menuBtnSlice";
 

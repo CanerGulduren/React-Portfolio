@@ -2,7 +2,7 @@
 
 .nav{
     @include dFlex(space-between);
-    padding-inline: 1rem;
+    padding: 1rem;
     
     .logo{
         width: 5rem;
@@ -37,8 +37,8 @@
         }
         .quitMenuIcon{
             position: absolute;
-            top: 2rem;
-            right: 3rem;
+            top: 2.5rem;
+            right: 2.5rem;
             width: 2rem;
             height: 2rem;
         }
