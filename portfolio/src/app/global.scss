@@ -1,19 +1,35 @@
+@import "../style/index.scss";
+
 *{
     text-decoration: none;
     list-style: none;
-    
     margin: 0;
     padding: 0;
 }
 
 body{
+    background: url("../../public/pink.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
-    background-color: #fff6e2;
-    margin-left: 3rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    place-items: center;
+    & > *{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
 }
 
 img,
 Image{
     width: 100%;
     display: block;
+}
+
+p{
+    font-size: clamp(1.3rem, 1.3vw, 1.6rem);
 }

@@ -1,12 +1,9 @@
-
-import Navbar from "@/component/navbar/Navbar";
 import "./global.scss";
-import { Nunito } from 'next/font/google';
+import { Mukta } from 'next/font/google';
 import { Providers } from "@/redux/services/provider";
-import SideBar from "@/component/sidebar/SideBar";
  
-const nunito = Nunito({
-  weight: '400',
+const mukta = Mukta({
+  weight: '500',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -15,11 +12,9 @@ const nunito = Nunito({
 export default function RootLayout({ children }) {
  return (
   
-    <html lang="en" className= {nunito.className}>
+    <html lang="en" className= {mukta.className}>
       <body>
       <Providers>
-      <Navbar />
-      <SideBar />
         {children}
       </Providers>
       </body>

@@ -1,6 +1,5 @@
 "use client"
 import style from "../../style/component/Navbar.module.scss";
-import Link from 'next/link';
 import { useSelector, useDispatch } from "react-redux";
 import { btnClick } from "../../redux/features/menuBtnSlice";
  
@@ -20,7 +19,7 @@ function NavLinks({navLinks}) {
       navLinks.map((link) => {
  
         return (
-          <Link
+          <span
             className = {style.links}
             href = {link.url}
             key = {link.name}
@@ -28,7 +27,7 @@ function NavLinks({navLinks}) {
             onClick = {menuChange}
           >
             {link.name}
-          </Link>
+          </span>
         );
       })}
     </>

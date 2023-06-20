@@ -1,34 +1,26 @@
-@import "../../style/index.scss";
+@import "../index.scss";
 
-.container{
-    margin-top: 5rem;
-}
 
-.mainTitle{
-    width: min(70rem, 90vw);
+  .mainTitle {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin-inline: auto;
-    & > *{
-        margin-block: .8rem;
+    gap: 2rem;
+    padding-inline: 1rem;
+    h1 {
+      line-height: 1;
+      letter-spacing: 0.2rem;
+      font-size: clamp(4.5rem, 6vw, 10rem);
+      color: #113016d1;
     }
-    .authorName{
-        line-height: 1.1;
-        letter-spacing: .2rem;
-        font-size: clamp(3.4rem, 4vw, 6rem);
-        color: #354a39d1;
-    }
-    .authorTitle{
-        font-size: clamp(1.8rem, 2vw, 2.4rem);
-    }
-}
-
-@include tabletSize{
-  .mainTitle{
-    .authorTitle{
-        width: 70%;
-        margin-left: 30%;
+    .authorTitle {
+      font-size: clamp(1.6rem, 1.6vw, 2rem);
     }
   }
+
+  .heroImg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
+
