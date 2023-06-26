@@ -12,8 +12,8 @@ const mukta = Mukta({
 export default function RootLayout({ children }) {
  return (
   
-    <html lang="en" className= {mukta.className}>
-      <body>
+    <html lang="en" >
+      <body className= {mukta.className}>
       <Providers>
         {children}
       </Providers>

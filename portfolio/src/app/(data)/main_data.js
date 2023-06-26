@@ -1,36 +1,37 @@
 "use client"
 import AboutTitle from "@/component/about/AboutTitle";
-import AboutCircle from "@/component/about/AboutCircle";
+import AboutSquare from "@/component/about/AboutSquare";
 import { aboutPageCount } from "./about_data";
+import { projectsPageCount } from "./projects_data";
 import HeroTitle from "@/component/hero/HeroTitle";
-import HeroCircle from "@/component/hero/HeroCircle";
+import HeroSquare from "@/component/hero/HeroSquare";
 import ProjectsTitle from "@/component/projects/ProjectsTitle";
-import ProjectsCircle from "@/component/projects/ProjectsCircle";
+import ProjectsSquare from "@/component/projects/ProjectsSquare";
 import ContactTitle from "@/component/contact/ContactTitle";
-import ContactCircle from "@/component/contact/ContactCircle";
+import ContactSquare from "@/component/contact/ContactSquare";
 
 
 const mainPage = [
     {
         title: HeroTitle,
-        circle: HeroCircle,
+        square: HeroSquare,
         sliderVisible: false 
     },
     {
         title: AboutTitle,
-        circle: AboutCircle,
+        square: AboutSquare,
         pageCount: aboutPageCount,
         sliderVisible: true 
     },
     {
         title: ProjectsTitle,
-        circle: ProjectsCircle,
-        pageCount: 1,
+        square: ProjectsSquare,
+        pageCount: projectsPageCount,
         sliderVisible: true 
     },
     {
         title: ContactTitle,
-        circle: ContactCircle,
+        square: ContactSquare,
         sliderVisible: false,
     }
 

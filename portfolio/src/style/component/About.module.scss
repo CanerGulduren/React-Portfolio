@@ -1,33 +1,51 @@
 @import "../index.scss";
 
-.container{
-    button{
-        border: none;
-        padding: 1rem;
-        margin-inline: 1rem;
+
+$squareSize: 25rem;
+
+.container{ 
+    width: $squareSize;  
+    height: $squareSize;
+    display: grid;
+    place-items: center;
+    border: $borderColor;
+    .squareTop,
+    .squareBottom{
+        position: absolute;
+        width: $sideSquareSize;
+        height: $sideSquareSize;
+        border: $borderColor;
+        & > *{
+            transform: rotate(-45deg);
+        }
     }
-    .skillSection{
-        @include dFlex;
-        flex-direction: column;
-        gap: 1rem;
+    .squareTop{
+        left: 0;
+        top: -9.2rem;
     }
+    .squareBottom{
+        right: 0;
+        bottom: -9.2rem;
+    }
+
     .skillContainer{
-        width: 85%;
+        width: 80%;
+        height: 80%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-inline: auto;
+        
+    transform: rotate(-45deg);
         .skillItems{
             margin-inline: auto;
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-size: clamp(1.2rem, 2.5vw, 2.2rem);
             text-align: center;
             color: #191919;
-            padding: 1rem 2rem;
             @include dFlex;
             flex-direction: column;
             p{
-                font-size: clamp(.8rem, 1.2rem, 1.4rem);
+                font-size: clamp(.8rem, 1rem, 1.2rem);
             }
         }
+        
     }
 }

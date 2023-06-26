@@ -1,6 +1,7 @@
 @import "../index.scss";
 
 
+
   .mainTitle {
     display: flex;
     flex-direction: column;
@@ -10,17 +11,26 @@
       line-height: 1;
       letter-spacing: 0.2rem;
       font-size: clamp(4.5rem, 6vw, 10rem);
-      color: #113016d1;
+      color: #be5a20;
     }
     .authorTitle {
       font-size: clamp(1.6rem, 1.6vw, 2rem);
     }
   }
 
-  .heroImg{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
+  .heroSquare{
+    rotate: 45deg;
+    overflow: hidden;
+    border: $borderColor;
+    width: $squareSize;
+    height: $squareSize;
+    .imgWrapper{
+      width: 100%;
+      height: 100%;
+      .heroImg{
+        rotate: -45deg;
+        object-fit: cover;
+      }
+    }
+  }
 

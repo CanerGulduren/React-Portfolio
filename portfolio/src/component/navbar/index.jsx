@@ -42,10 +42,7 @@ function Navbar() {
       className={style.menuIcon} 
       onClick={menuChange} 
       />
-
-      <NavBarLinks linkStyle={style.linkContainer} />
       
-
       {showContent && (
         <div className={style.fullSizeNav}>
           <NavBarLinks linkStyle={style.mobileLinks} />

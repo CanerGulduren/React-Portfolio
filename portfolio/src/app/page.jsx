@@ -1,19 +1,19 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import MainTitle from '@/component/MainTitle'
-import Circle from '@/component/Circle'
 import style from "@/style/component/Main.module.scss"
 import { useSelector } from "react-redux";
 import Links from '@/component/Links'
 import Navbar from '@/component/navbar'
 import SliderBtn from '@/component/SliderBtn'
+import Square from '@/component/Square'
 
 function Page() {
   const mainData = useSelector((state) => state.globalMainData.value)
   const pageCount = useSelector((state) => state.globalMainData.count);
   
   let TitleComponent = mainData[pageCount].title
-  let PageComponent = mainData[pageCount].circle
+  let PageComponent = mainData[pageCount].square
   let isSliderVisible = mainData[pageCount].sliderVisible
   
   return (
@@ -25,9 +25,9 @@ function Page() {
        <Links />
       </MainTitle>
 
-      <Circle>
+      <Square>
       < PageComponent/>
-      </Circle>  
+      </Square>  
 
       { isSliderVisible && <SliderBtn />}
 

@@ -1,0 +1,19 @@
+@import "../index.scss";
+
+    .mobileScreen{
+        position: absolute;
+        width: 12rem;
+        height: 20rem;
+        border: 5px solid #333;
+        border-radius: 10px;
+        bottom: -35%;
+        right: .8rem;
+        background-color: orange;
+        z-index: 999;
+    }
+
+    .squareImg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }

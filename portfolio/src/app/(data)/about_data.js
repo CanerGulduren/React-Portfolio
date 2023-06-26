@@ -88,12 +88,12 @@ const aboutData = [
     {
         title: "About Me",
         content: "Benim adım caner falan filan bu bir deneme",
-        circle: [...frontEndSkills]
+        square: [...frontEndSkills]
     },
     {
         title: "lorem bla",
         content: "DENEMEEEEE",
-        circle: [...otherSkills]
+        square: [...otherSkills]
     },
 ]
 

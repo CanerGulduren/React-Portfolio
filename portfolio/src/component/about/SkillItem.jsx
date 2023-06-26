@@ -6,7 +6,7 @@ function SkillItem({skillData}){
       skillData.map((item) => {
           return(
             <div className= {style.skillItems} key={item.key}>
-              {item.component}
+              <span>{item.component}</span>
               <p>{item.name}</p>
             </div>
           )
