@@ -2,44 +2,36 @@
 import React from "react";
 import aboutData from "@/app/(data)/about_data";
 import { useSelector } from "react-redux";
-import SkillItem from "./SkillItem";
-import style from "@/style/component/About.module.scss"
-import {motion} from "framer-motion"
+import style from "@/style/component/About.module.scss";
+import CustomSquare from "./CustomSquare";
+import MultipleSkillItem from "./MultipleSkillItem";
+import SingleSkillItem from "./SingleSkillItem";
 
 function AboutSquare() {
-  let pageCount = useSelector(state => state.slider.value)
+  
+  let pageCount = useSelector((state) => state.slider.value);
+  
   return (
-    <motion.div
-    key={"about"}
-    className= {style.container}
-    initial= {{opacity: 0, rotate: 45}}
-    animate= {{opacity: 1, rotate: 0}}
-    transition= {{duration: 1,}}
+    <div className= {style.container}>
+      <CustomSquare 
+      content={<MultipleSkillItem skillData={aboutData[pageCount].square} />} 
+      squareStyle={style.mainSquare}
+      contentStyle={style.mainSkillWrapper}
+      />
 
-    >
-  <motion.div className= {style.skillContainer}>
-    <SkillItem skillData={aboutData[pageCount].square} />
-  </motion.div>
-  <motion.div 
-  className={style.squareTop}
-  initial={{rotateX: -90, y: 100}}
-  animate={{rotateX: 0, y: 0}}
-  transition={{duration: .6}}>
-    top
-  </motion.div>
-  <motion.div className={style.squareBottom}
-    initial={{rotateX: 90, y: -100}}
-    animate={{rotateX: 0, y: 0}}
-    transition={{duration: .6}}>
-      bottom
-    </motion.div>
-    </motion.div>
-    
-
-  )
+      <CustomSquare 
+      content={<SingleSkillItem item={aboutData[pageCount].sideSquare1} />}
+      squareStyle={style.sideSquare1}
+      contentStyle={style.sideSkillWrapper}
+      />
+      
+      <CustomSquare 
+      content={<SingleSkillItem item={aboutData[pageCount].sideSquare2} />}
+      squareStyle={style.sideSquare2}
+      contentStyle={style.sideSkillWrapper}
+      />
+    </div>
+  );
 }
-
-
-
 
 export default AboutSquare;

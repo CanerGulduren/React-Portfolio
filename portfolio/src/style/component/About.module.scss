@@ -1,51 +1,99 @@
 @import "../index.scss";
 
+$skillImgSize: clamp(1.2rem, 3.5vw, 3rem);
+$skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
 
-$squareSize: 25rem;
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8rem 1fr 8rem;
+  gap: 0.5rem;
 
-.container{ 
-    width: $squareSize;  
-    height: $squareSize;
-    display: grid;
-    place-items: center;
-    border: $borderColor;
-    .squareTop,
-    .squareBottom{
-        position: absolute;
-        width: $sideSquareSize;
-        height: $sideSquareSize;
-        border: $borderColor;
-        & > *{
-            transform: rotate(-45deg);
-        }
-    }
-    .squareTop{
-        left: 0;
-        top: -9.2rem;
-    }
-    .squareBottom{
-        right: 0;
-        bottom: -9.2rem;
-    }
+}
 
-    .skillContainer{
-        width: 80%;
-        height: 80%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        
-    transform: rotate(-45deg);
-        .skillItems{
-            margin-inline: auto;
-            font-size: clamp(1.2rem, 2.5vw, 2.2rem);
-            text-align: center;
-            color: #191919;
-            @include dFlex;
-            flex-direction: column;
-            p{
-                font-size: clamp(.8rem, 1rem, 1.2rem);
-            }
-        }
-        
-    }
+.mainSquare,
+.sideSquare1,
+.sideSquare2 {
+  border: $borderColor;
+  position: relative;
+  overflow: hidden;
+  rotate: 45deg;
+  & > :first-child{
+    rotate: -45deg;
+  }
+}
+
+.mainSquare {
+  width: $squareSizeAbout;
+  height: $squareSizeAbout;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.mainSkillWrapper {
+  @include dGrid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat((3, 1fr));
+  gap: 0.8rem;
+
+  & :first-child {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  & :nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  & :nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  & :nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  & :nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+.skillItems {
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  color: #191919;
+  @include dFlex;
+  flex-direction: column;
+  padding: 1rem;
+  line-height: 1.2;
+  & span {
+    font-size: $skillImgSize;
+  }
+  & p {
+    font-size: $skillFontSize;
+  }
+}
+
+.sideSquare1,
+.sideSquare2 {
+  width: $sideSquareSize;
+  height: $sideSquareSize;
+  text-align: center;
+}
+
+.sideSquare1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.sideSquare2 {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  justify-self: flex-start;
+  align-self: center;
 }

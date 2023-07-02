@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React from 'react'
 import MainTitle from '@/component/MainTitle'
 import style from "@/style/component/Main.module.scss"
 import { useSelector } from "react-redux";

@@ -11,7 +11,6 @@ function SliderBtn() {
     let currentCount = useSelector(state => state.globalMainData.count)
 
     let slideContentLenght = mainData[currentCount].pageCount
-    console.log(currentCount)
   return (
     <div className= {style.sliderBtn}>
     <button onClick={() => {

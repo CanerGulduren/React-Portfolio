@@ -6,6 +6,18 @@
    align-items: $align;
 }
 
+@mixin dGrid($placeItem: center){
+   display: grid;
+   place-items: $placeItem;
+}
+
+@mixin rotateItem($parentDeg: 45deg, $childDeg: -45deg){
+   rotate: $parentDeg;
+   & > *{
+      rotate: $childDeg;
+   }
+}
+
 @mixin tabletSize{
    @media(min-width: $tablet) {
       @content

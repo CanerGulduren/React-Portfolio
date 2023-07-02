@@ -21,7 +21,7 @@ function HeroSquare() {
       animate= {{y: 0, x: 0, opacity: 1}}
       transition= {{
         duration: .6,
-        delay: .8,
+        delay: .6,
       }}
       >
       <Image
