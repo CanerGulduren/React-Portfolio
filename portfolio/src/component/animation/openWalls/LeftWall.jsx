@@ -7,7 +7,7 @@ function LeftWall() {
   const [scope, animate] = useAnimate();
   let pageChange = useSelector((state) => state.slider.value);
   useEffect(() => {
-    animate(scope.current, {left: [-250, 0, 0, -250]}, {duration: .8});
+    animate(scope.current, {left: [-550, 0, 0, -550]}, {duration: .8});
   }, [pageChange]);
   return (
     <div className={style.leftWall} ref={scope}></div>

@@ -1,6 +1,6 @@
 @import "../index.scss";
 
-$skillImgSize: clamp(1.2rem, 3.5vw, 3rem);
+$skillImgSize: clamp(2rem, 3.5vw, 3rem);
 $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
 
 .container {
@@ -10,7 +10,9 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   grid-template-columns: 1fr;
   grid-template-rows: 8rem 1fr 8rem;
   gap: 0.5rem;
-
+  @include mdSize{
+    grid-template-rows: 1fr;
+  }
 }
 
 .mainSquare,
@@ -23,13 +25,38 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   & > :first-child{
     rotate: -45deg;
   }
+
+  @include lgSize{
+    rotate: 0deg;
+    & > :first-child{
+      rotate: 0deg;
+    }
+  }
+
+  @include mdSize{
+    border: 5px solid white;
+}
 }
 
 .mainSquare {
-  width: $squareSizeAbout;
-  height: $squareSizeAbout;
+  width: 25rem;
+  height: 25rem;
+  display: grid;
+  place-items: center;
   grid-row: 2 / 3;
   grid-column: 1 / 2;
+  @include lgSize{
+    width: 23rem;
+    height: 23rem;
+  }
+  @include mdSize{
+    width: min(60vw, 26rem);
+    height: 20rem;
+  }
+  @include smSize{
+    width: 90vw;
+    height: 100%
+  }
 }
 
 .mainSkillWrapper {
@@ -64,7 +91,7 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   width: 6rem;
   height: 6rem;
   text-align: center;
-  color: #191919;
+  color: $txtDarkColor;
   @include dFlex;
   flex-direction: column;
   padding: 1rem;
@@ -75,13 +102,29 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   & p {
     font-size: $skillFontSize;
   }
+
+  @include lgSize{
+    width: 4rem;
+    height: 4rem;
+  }
+  @include mdSize{
+    color: #e0e0e0;
+  }
 }
 
 .sideSquare1,
 .sideSquare2 {
-  width: $sideSquareSize;
-  height: $sideSquareSize;
+  width: 7rem;
+  height: 7rem;
   text-align: center;
+  @include dFlex;
+  @include lgSize{
+    width: 7rem;
+    height: 7rem;
+  }
+  @include mdSize{
+    display: none;
+  }
 }
 
 .sideSquare1 {
@@ -96,4 +139,10 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   grid-column: 1 / 2;
   justify-self: flex-start;
   align-self: center;
+}
+
+.aboutTitle{
+  & h2{
+    font-size: $titleFontSize;
+  }
 }

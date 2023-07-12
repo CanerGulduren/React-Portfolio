@@ -7,9 +7,7 @@ function Square({children}) {
 
   return (
     <div className ={style.mainContent}>
-      <div className= {style.square}>
       {children}
-      </div>
     </div>
   )
 } 

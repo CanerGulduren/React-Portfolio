@@ -19,7 +19,25 @@
 }
 
 @mixin tabletSize{
-   @media(min-width: $tablet) {
+   @media(max-width: $tablet) {
       @content
    }
-}
+};
+
+@mixin lgSize{
+   @media(max-width: $largeScreen){
+      @content
+   }
+};
+
+@mixin mdSize{
+   @media(max-width: $mediumScreen){
+      @content
+   }
+};
+
+@mixin smSize{
+   @media(max-width: $smScreen){
+      @content
+   }
+};

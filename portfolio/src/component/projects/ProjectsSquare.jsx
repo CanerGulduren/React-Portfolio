@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "@/style/component/Projects.module.scss";
-import squareStyle from "@/style/component/Main.module.scss";
 import { useSelector } from "react-redux";
 import projectData from "@/app/(data)/projects_data";
 import { useToggle } from "@/hooks/useToggle";
 import { motion } from "framer-motion";
+import { AiOutlineDesktop, AiOutlineMobile } from "react-icons/ai";
 
 function ProjectsSquare() {
   const [mobileScreen, setMobileScreen] = useToggle();
@@ -21,16 +21,20 @@ function ProjectsSquare() {
             if (!mobileScreen) return;
             setMobileScreen();
           }}
+          className={`${!mobileScreen ? style.activeBtn : ""}`}
         >
-          Desktop
+          <AiOutlineDesktop style={{fontSize: "1.1rem"}} />
+          <span>Desktop</span>
         </button>
         <button
           onClick={() => {
             if (mobileScreen) return;
             setMobileScreen();
           }}
+          className={`${mobileScreen ? style.activeBtn : ""}`}
         >
-          Mobile
+          <AiOutlineMobile style={{fontSize: "1.1rem"}} />
+          <span>Mobile</span>
         </button>
       </div>
 

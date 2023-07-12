@@ -13,10 +13,21 @@ function AboutTitle() {
   };
   return (
     <div className={style.aboutTitle}>
-      <motion.h2 initial="hidden" animate="visible" transition= {{delay: .5, duration: .4}}  variants={animation}>
+      <motion.h2
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.5, duration: 0.4 }}
+        variants={animation}
+      >
         {aboutData[pageCount].title}
       </motion.h2>
-      <motion.p initial="hidden" animate="visible"  transition= {{delay: .5, duration: .4}} variants={animation}>
+
+      <motion.p
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.5, duration: 0.4 }}
+        variants={animation}
+      >
         {aboutData[pageCount].content}
       </motion.p>
     </div>

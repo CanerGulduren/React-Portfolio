@@ -1,56 +1,84 @@
 @import "../index.scss";
 
-
-.screen{
-    border-radius: 10px;
-    position: relative;
-    filter: drop-shadow(0 0 .5rem black);
-}
-
-.screen[data-mobile="true"]{
-    width: 17rem;
-    height: 35rem;
-    border: 10px solid black;
-    border-bottom: 45px solid black;
-
-
-    .squareImg{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+.container{
+    height: 100%;
+    @include mdSize{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
-    &::before{
-        content: "";
-        position: absolute;
-        width: 2.4rem;
-        height: 2.4rem;
-        background-color: #fff;
-        border-radius: 50%;
-        right: calc(50% - 15px);
-        bottom: -2.6rem;
+    .screen{
+        border-radius: 10px;
+        position: relative;
+        filter: drop-shadow(0 0 .5rem black);
+        object-fit: cover;
+    }
+    
+    .screen[data-mobile="true"]{
+        width: 17rem;
+        height: 35rem;
+        border: 10px solid black;
+        border-bottom: 45px solid black;
+        
+        @include mdSize{
+            height: 30rem;
+        }
+        
+        
+        .squareImg{
+            width: 100%;
+            height: 100%;
+        }
+        
+        &::before{
+            content: "";
+            position: absolute;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-color: #fff;
+            border-radius: 50%;
+            right: calc(50% - 15px);
+            bottom: -2.6rem;
     }
 }
 
 .screen[data-mobile="false"]{
-    width: 85%;
-    border: 15px solid black;
+    width: 40rem;
+    height: 22rem;
+    border: 10px solid black;
     margin-inline: auto;
     
+    @include lgSize{
+        width: 30rem;
+        height: 18rem;
+    }
+    @include mdSize{
+        width: min(60vw, 35rem);
+        height: 15rem;
+        &::before{
+            display: none;
+        }
+        &::after{
+            display: none;
+        }
+    }
 
+    @include smSize{
+        width: 90vw;
+    }
+      
     .squareImg{
         width: 100%;
         height: 100%;
-        object-fit: contain;
     }
-
+    
     &::before{
         content: "";
         position: absolute;
-        width: 15px;
+        width: 10px;
         height: 4.5rem;
         background-color: black;
-        bottom: -4.5rem;
+        bottom: -4.2rem;
         left: 40%;
         rotate: 45deg;
         border-bottom-right-radius: 5rem;
@@ -58,22 +86,42 @@
     &::after{
         content: "";
         position: absolute;
-        width: 15px;
+        width: 10px;
         height: 4.5rem;
         background-color: black;
-        bottom: -4.5rem;
+        bottom: -4.2rem;
         right: 40%;
         rotate: -45deg;
         border-bottom-left-radius: 5rem;
     }
-    }
-   
-    .switchScreen{
+}
+
+.switchScreen{
+    @include dFlex;
+    padding: 1rem;
+    gap: 1rem;
+    
+    & button{
+        width: 5.5rem;
+        height: 2.8rem;
+        border-radius: 5px;
+        padding: .4rem;
+        border: none;
         @include dFlex;
-        padding: 1rem;
-        gap: .5rem;
-        
-        & button{
-            padding: .4rem;
+        gap: 5px;
+        &:hover{
+            cursor: pointer;
         }
     }
+
+    @include mdSize{
+        display: none;
+    }
+
+    .activeBtn{
+        border: 3px solid black;
+        scale: 1.1;
+    }
+}
+}
+

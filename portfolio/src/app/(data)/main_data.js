@@ -1,4 +1,4 @@
-"use client"
+
 import AboutTitle from "@/component/about/AboutTitle";
 import AboutSquare from "@/component/about/AboutSquare";
 import { aboutPageCount } from "./about_data";

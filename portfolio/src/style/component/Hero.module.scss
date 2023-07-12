@@ -5,32 +5,48 @@
   .mainTitle {
     display: flex;
     flex-direction: column;
+
     gap: 2rem;
     padding-inline: 1rem;
+    color: $txtLightColor;
     h1 {
       line-height: 1;
       letter-spacing: 0.2rem;
-      font-size: clamp(4.5rem, 6vw, 10rem);
+      font-size: clamp(4.5rem, 6.5vw, 10rem);
       color: #be5a20;
     }
     .authorTitle {
-      font-size: clamp(1.6rem, 1.6vw, 2rem);
+      font-size: clamp(1.6rem, 1.7vw, 3rem);
     }
   }
 
   .heroSquare{
-    rotate: 45deg;
     overflow: hidden;
-    border: $borderColor;
-    width: $squareSizeHero;
-    height: $squareSizeHero;
-    .imgWrapper{
-      width: 100%;
-      height: 100%;
-      .heroImg{
-        rotate: -45deg;
+      .heroImg{ 
+        width: min(40vw, 30rem);
+        height: 35rem;
         object-fit: cover;
+        border-radius: 10px;
+        border: 10px solid white;
       }
-    }
+    @include lgSize{   
+      & .imgWrapper .heroImg{    
+        height: 60vh;
+      }
+
+  }
+  @include mdSize{
+    & .imgWrapper .heroImg{    
+        width: min(60vw, 22rem);
+        height: clamp(15rem, 25rem, 25rem);
+        border: 5px solid white;
+        object-fit: cover;
+        }
+  }
+  @include smSize{
+    & .imgWrapper .heroImg{    
+      width: 80vw;
+      }
+  }
   }
 

@@ -5,16 +5,16 @@ import style from "@/style/component/Main.module.scss"
 import { useSelector } from "react-redux";
 import Links from '@/component/Links'
 import Navbar from '@/component/navbar'
-import SliderBtn from '@/component/SliderBtn'
+import Slider from "@/component/slider/Slider"
 import Square from '@/component/Square'
+import mainPage from "@/app/(data)/main_data"
 
 function Page() {
-  const mainData = useSelector((state) => state.globalMainData.value)
   const pageCount = useSelector((state) => state.globalMainData.count);
   
-  let TitleComponent = mainData[pageCount].title
-  let PageComponent = mainData[pageCount].square
-  let isSliderVisible = mainData[pageCount].sliderVisible
+  let TitleComponent = mainPage[pageCount].title
+  let PageComponent = mainPage[pageCount].square
+  let isSliderVisible = mainPage[pageCount].sliderVisible
   
   return (
     <div className= {style.container}>
@@ -22,14 +22,15 @@ function Page() {
 
       <MainTitle>
        < TitleComponent/>
-       <Links />
       </MainTitle>
+       <Links />
 
       <Square>
       < PageComponent/>
+      { isSliderVisible && <Slider styleName={style.mainContentSlider} /> }
       </Square>  
 
-      { isSliderVisible && <SliderBtn />}
+      { isSliderVisible && <Slider styleName={style.fullPageSlider} />}
 
     </div>
   )

@@ -106,7 +106,7 @@ const side2 = [
 const aboutData = [
   {
     title: "About Me",
-    content: "Benim adım caner falan filan bu bir deneme",
+    content: "I am a person who has prioritized the lifelong learning method. I enjoy learning new things. But I enjoy creating something new more!",
     square: [...frontEndSkills],
     sideSquare1: side1[0],
     sideSquare2: side1[1],

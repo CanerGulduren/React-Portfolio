@@ -1,15 +1,20 @@
+import {AiFillGithub, AiOutlineMail, AiFillLinkedin} from "react-icons/ai"
+
 const navLinks = [
     {
-        name: "Projects",
-        url: "./pages/projects"
+        name: "Github",
+        url: <AiFillGithub />,
+        path: "https://github.com/CanerGulduren"
     },
     {
-        name: "About",
-        url: "./pages/about"
+        name: "Linkedin",
+        url: <AiFillLinkedin />,
+        path: "https://www.linkedin.com/in/caner-güldüren"
     },
     {
-        name: "Contact",
-        url: "./pages/contact"
+        name: "E-mail",
+        url: <AiOutlineMail />,
+        path: "mailto:canerguldurenn@gmail.com"
     }
 ]
 

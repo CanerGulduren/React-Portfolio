@@ -1,7 +1,4 @@
 $tablet: 800px;
-$desktop: 1200px;
-
-:export{
-    desktop: $desktop;
-    mobile: $tablet;
-}
+$largeScreen: 1500px;
+$mediumScreen:  950px;
+$smScreen: 500px;

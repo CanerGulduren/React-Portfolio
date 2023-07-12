@@ -1,0 +1,56 @@
+@import "../index.scss";
+
+$paddingBlock: 4rem;
+
+.container {
+  width: 35rem;
+  border-radius: 10px;
+  padding: $paddingBlock 1.5rem;
+  background-color: #181818;
+  border: 5px solid white;
+  @include lgSize{
+    width: 24rem;
+  }
+  @include mdSize{
+    padding: 2rem 1rem;
+    width: min(55vw, 25rem);
+  }
+  @include smSize{
+    width: 85vw;
+    height: 100%
+  }
+  & h4{
+    font-weight: 700;
+    color: $txtLightColor
+  }
+  .formWrapper {
+    @include dFlex("center", "baseline");
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: $txtLightColor;
+    & textarea {
+      height: 5rem;
+      resize: none;
+    }
+    & input {
+      width: max(100%, 10rem);
+      border-radius: 5px;
+      border: 2px solid black;
+    }
+    & input[type="text"],
+    input[type="email"] {
+      height: 2.5rem;
+    }
+    & input[type="submit"] {
+      width: 50%;
+      height: 2.5rem;
+      align-self: flex-end;
+      font-size: 1.1rem;
+      margin-top: .5rem;
+      &:hover{
+        cursor: pointer;
+    }
+    }
+  }
+}
