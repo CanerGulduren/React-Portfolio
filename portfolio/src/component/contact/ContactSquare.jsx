@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import style from "@/style/component/Contact.module.scss"
+import { motion } from "framer-motion";
 
 function ContactSquare() {
   const form = useRef();
@@ -26,7 +27,14 @@ function ContactSquare() {
       );
   };
   return (
-    <div className= {style.container}>
+    <motion.div 
+    className= {style.container}
+    initial= {{scale: 0, opacity: 0}}
+    animate= {{scale: 1, opacity: 1}}
+    transition= {{
+      duration: .2,
+    }}
+    >
       <form ref={form} onSubmit={sendEmail} className= {style.formWrapper}>
         <label>Name</label>
         <input type="text" name="user_name" />
@@ -36,7 +44,7 @@ function ContactSquare() {
         <textarea name="message" />
         <input type="submit" value="Send" />
       </form>
-    </div>
+    </motion.div>
   );
 }
 

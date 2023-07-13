@@ -12,11 +12,11 @@
     h1 {
       line-height: 1;
       letter-spacing: 0.2rem;
-      font-size: clamp(4.5rem, 6.5vw, 10rem);
-      color: #be5a20;
+      font-size: clamp(4.2rem, 6.2vw, 9rem);
+      color: $headLineColor;
     }
     .authorTitle {
-      font-size: clamp(1.6rem, 1.7vw, 3rem);
+      font-size: clamp(1.6rem, 1.4vw, 3rem);
     }
   }
 

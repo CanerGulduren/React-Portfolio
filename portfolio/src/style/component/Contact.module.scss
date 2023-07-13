@@ -17,7 +17,8 @@ $paddingBlock: 4rem;
   }
   @include smSize{
     width: 85vw;
-    height: 100%
+    height: 100%;
+    padding: 1rem .4rem;
   }
   & h4{
     font-weight: 700;
@@ -52,5 +53,20 @@ $paddingBlock: 4rem;
         cursor: pointer;
     }
     }
+  }
+}
+
+
+.contactTitle{
+  & h3{
+    font-size: $titleFontSize;
+    padding-bottom: 1rem;
+  }
+}
+
+.contactInfo{
+  margin-block: 1rem;
+  & p{
+    font-size: clamp(.9rem, 1.2rem, 1.3rem);
   }
 }

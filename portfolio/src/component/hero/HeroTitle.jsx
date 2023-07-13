@@ -1,13 +1,14 @@
 import React from "react";
 import style from "../../style/component/Hero.module.scss";
 import {motion} from "framer-motion"
+import { Prompt } from "next/font/google";
 
-/*const prompt = Prompt({
-  weight: "800",
+const prompt = Prompt({
+  weight: "700",
   subsets: ["latin"],
   display: "swap",
 });
-*/
+
 
 function HeroTitle() {
   return (
@@ -16,6 +17,7 @@ function HeroTitle() {
         initial={{x: 60, opacity: 0}}
         animate={{x:0 ,opacity: 1 }}
         transition={{duration: .4}}
+        className= {prompt.className}
         >
           <h1>Caner</h1>
           <h1>Güldüren</h1>
@@ -26,7 +28,7 @@ function HeroTitle() {
         animate={{y:0 ,opacity: 1 }}
         transition={{duration: .3, delay: .2}}
         >
-          I'm a Front-End Developer with a passion for design and obsession for perfection.
+          Hi there! I'm a Frontend Developer with a knack for crafting beautiful and responsive websites that leave a lasting impression.
         </motion.p>
       </div>
   );

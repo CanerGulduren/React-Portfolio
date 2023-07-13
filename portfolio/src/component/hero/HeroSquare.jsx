@@ -6,22 +6,14 @@ import { motion } from "framer-motion";
 
 function HeroSquare() {
   return (
-    <motion.div
-    className= {style.heroSquare}
-      initial= {{ scale: 0.7, opacity: 0 }}
-      animate= {{scale: 1, opacity: 1}}
-      transition= {{
-        duration: .4,
-        delay: .3,
-      }}
-    >
+    <div className= {style.heroSquare} >
       <motion.div
       className= {style.imgWrapper}
       initial= {{scale: 0, opacity: 0}}
       animate= {{scale: 1, opacity: 1}}
       transition= {{
-        duration: .6,
-        delay: .6,
+        duration: .4,
+        delay: .4,
       }}
       >
       <Image
@@ -31,7 +23,7 @@ function HeroSquare() {
         alt="author"
         />
         </motion.div>
-    </motion.div>
+    </div>
   );
 }
 

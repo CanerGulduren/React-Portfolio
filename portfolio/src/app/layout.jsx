@@ -1,9 +1,9 @@
 import "./global.scss";
-import { Mukta } from 'next/font/google';
 import { Providers } from "@/redux/services/provider";
+import { Mukta_Vaani } from 'next/font/google';
  
-const mukta = Mukta({
-  weight: '500',
+const mukta = Mukta_Vaani({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 });

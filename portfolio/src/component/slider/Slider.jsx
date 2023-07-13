@@ -38,7 +38,15 @@ function SliderBtn({ styleName }) {
   }, [sliderCount]);
 
   return (
-    <div className={styleName}>
+    <motion.div 
+    className={styleName}
+    initial= {{opacity: 0}}
+    animate= {{scale: [0, 1], opacity: 1}}
+    transition= {{
+      duration: .4,
+      delay: .6
+    }}
+    >
       <motion.div
         style={leftDisable ? disableStyle.div : activeStyle.div}
         onClick={() => {
@@ -68,7 +76,7 @@ function SliderBtn({ styleName }) {
       >
         <AiFillRightSquare />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

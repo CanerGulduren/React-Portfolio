@@ -106,14 +106,14 @@ const side2 = [
 const aboutData = [
   {
     title: "About Me",
-    content: "I am a person who has prioritized the lifelong learning method. I enjoy learning new things. But I enjoy creating something new more!",
+    content: "Glad you're here! I'm a lifelong learner and a curious Frontend Developer who embraces new challenges. I'm passionate about staying up-to-date with the latest industry trends and technologies.",
     square: [...frontEndSkills],
     sideSquare1: side1[0],
     sideSquare2: side1[1],
   },
   {
-    title: "lorem bla",
-    content: "DENEMEEEEE",
+    title: "When I am not coding",
+    content: "you can find me exploring the outdoors, reading tech blogs, or attending meetups to connect with fellow developers. I am constantly seeking opportunities to grow both professionally and personally. In my free time, I find immense joy in delving into the art of video editing, specifically focusing on movies, and indulging in the creative process of designing captivating game levels within the breathtaking realm of Unreal Engine 5.",
     square: [...otherSkills],
     sideSquare1: side2[0],
     sideSquare2: side2[1],

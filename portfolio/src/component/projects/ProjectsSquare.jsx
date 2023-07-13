@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import projectData from "@/app/(data)/projects_data";
 import { useToggle } from "@/hooks/useToggle";
 import { motion } from "framer-motion";
-import { AiOutlineDesktop, AiOutlineMobile } from "react-icons/ai";
+import SwitchScreen from "./SwitchScreen";
 
 function ProjectsSquare() {
   const [mobileScreen, setMobileScreen] = useToggle();
@@ -12,37 +12,21 @@ function ProjectsSquare() {
   let pageCount = useSelector((state) => state.slider.value);
   let desktopImg = projectData[pageCount].desktopImg;
   let mobileImg = projectData[pageCount].mobileImg;
-  let imgTitle = projectData[pageCount].imgTitle;
+  let imgTitle = projectData[pageCount].title;
   return (
     <div className={style.container}>
-      <div className={style.switchScreen}>
-        <button
-          onClick={() => {
-            if (!mobileScreen) return;
-            setMobileScreen();
-          }}
-          className={`${!mobileScreen ? style.activeBtn : ""}`}
-        >
-          <AiOutlineDesktop style={{fontSize: "1.1rem"}} />
-          <span>Desktop</span>
-        </button>
-        <button
-          onClick={() => {
-            if (mobileScreen) return;
-            setMobileScreen();
-          }}
-          className={`${mobileScreen ? style.activeBtn : ""}`}
-        >
-          <AiOutlineMobile style={{fontSize: "1.1rem"}} />
-          <span>Mobile</span>
-        </button>
-      </div>
+
+      <SwitchScreen styleName={style.switchScreen} handleState={setMobileScreen} isMobile={mobileScreen} />
 
       <motion.div
         className={style.screen}
-        transition={{ duration: 0.2 }}
         layout
         data-mobile={mobileScreen ? "true" : "false"}
+        initial= {{scale: 0, opacity: 0}}
+        animate= {{scale: 1, opacity: 1}}
+        transition= {{
+          duration: .2,
+        }}
       >
         <img
           src={mobileScreen ? mobileImg : desktopImg}
