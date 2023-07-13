@@ -2,7 +2,7 @@ import React from 'react'
 
 function Loading() {
   return (
-    <div style={{fontSize: "6vw"}}>Loading..</div>
+    <div style={{fontSize: "2rem"}}>Loading..</div>
   )
 }
 

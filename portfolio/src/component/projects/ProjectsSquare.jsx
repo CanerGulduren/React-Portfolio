@@ -8,7 +8,6 @@ import SwitchScreen from "./SwitchScreen";
 
 function ProjectsSquare() {
   const [mobileScreen, setMobileScreen] = useToggle();
-  console.log(mobileScreen);
   let pageCount = useSelector((state) => state.slider.value);
   let desktopImg = projectData[pageCount].desktopImg;
   let mobileImg = projectData[pageCount].mobileImg;

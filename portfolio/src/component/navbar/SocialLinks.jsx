@@ -8,6 +8,8 @@ function SocialLinks() {
           return(
               <Link
               href={link.path}
+              key={link.name}
+              target='_blank'
               >
               {link.url}
               </Link>

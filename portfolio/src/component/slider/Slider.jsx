@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import style from "@/style/component/Main.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "@/redux/features/sliderSlice";
 import mainPage from "@/app/(data)/main_data";
