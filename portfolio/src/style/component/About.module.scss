@@ -121,6 +121,9 @@ $skillFontSize: clamp(0.8rem, 1rem, 1.2rem);
   @include mdSize{
     display: none;
   }
+  @include mdHeight{
+    display: none;
+  }
 }
 
 .sideSquare1 {

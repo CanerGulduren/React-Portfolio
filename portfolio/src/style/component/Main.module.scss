@@ -19,10 +19,11 @@ $paddingLeft: 1rem;
   -webkit-backdrop-filter: blur(.8px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-
+  
   @include lgSize {
     width: 95vw;
     height: 90vh;
+    row-gap: 1rem;
   }
   @include mdSize {
     width: 100vw;
@@ -38,7 +39,6 @@ $paddingLeft: 1rem;
   @include smSize {
     grid-template-columns: 100%;
     grid-template-rows: 0.2fr 1fr 1fr 0.4fr;
-    gap: 2rem;
   }
 
   .mainTitle {
@@ -98,8 +98,11 @@ $paddingLeft: 1rem;
       }
       @include mdSize {
         border: 4px solid #222;
+        font-size: .8em;
+        padding: 1rem 1.4rem;
       }
       @include smSize {
+        padding: 1rem;
         border-radius: 5px;
       }
     }

@@ -37,7 +37,13 @@
 };
 
 @mixin smSize{
-   @media(max-width: $smScreen){
+   @media(max-width: $smallScreen){
       @content
    }
 };
+
+@mixin mdHeight{
+   @media(max-height: $mediumScreen){
+      @content
+   }
+}
