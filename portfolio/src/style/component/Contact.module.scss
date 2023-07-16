@@ -6,8 +6,9 @@ $paddingBlock: 4rem;
   width: 35rem;
   border-radius: 10px;
   padding: $paddingBlock 1.5rem;
-  background-color: #181818;
-  border: 5px solid white;
+  border: 3px solid #222;
+  background-color: #d1d1d1;
+
   @include lgSize{
     width: 24rem;
   }
@@ -29,24 +30,29 @@ $paddingBlock: 4rem;
     flex-direction: column;
     gap: 0.5rem;
     font-size: 1.2rem;
-    color: $txtLightColor;
+    color: $txtDarkColor;
     & textarea {
       height: 5rem;
       resize: none;
     }
-    & input {
+    & input,
+    & textarea{
       width: max(100%, 10rem);
-      border-radius: 5px;
+      border-radius: 2px;
       border: 2px solid black;
     }
     & input[type="text"],
-    input[type="email"] {
+    & input[type="email"]{
       height: 2.5rem;
     }
     & input[type="submit"] {
       width: 50%;
       height: 2.8rem;
       align-self: flex-end;
+      background-color: #222;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
       font-size: 1.1rem;
       margin-top: .5rem;
       &:hover{
@@ -54,6 +60,11 @@ $paddingBlock: 4rem;
     }
     }
   }
+}
+
+.errorMessage{
+  color: #ff1c1c;
+  font-size: .9rem;
 }
 
 
