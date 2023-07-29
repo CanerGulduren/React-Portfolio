@@ -5,6 +5,7 @@ import projectData from "@/app/(data)/projects_data";
 import { useToggle } from "@/hooks/useToggle";
 import { motion } from "framer-motion";
 import SwitchScreen from "./SwitchScreen";
+import Image from "next/image";
 
 function ProjectsSquare() {
   const [mobileScreen, setMobileScreen] = useToggle();
@@ -27,10 +28,12 @@ function ProjectsSquare() {
           duration: .2,
         }}
       >
-        <img
+        <Image
           src={mobileScreen ? mobileImg : desktopImg}
           alt={imgTitle}
           className={style.squareImg}
+          width={800}
+          height={800}
         />
       </motion.div>
     </div>
