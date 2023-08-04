@@ -11,18 +11,15 @@
         border-radius: 10px;
         position: relative;
         filter: drop-shadow(0 0 .5rem black);
-        object-fit: cover;
     }
     
     .screen[data-mobile="true"]{
-        width: auto;
-        height: 35rem;
+        width: 15rem;
+        height: 30rem;
         border: 10px solid black;
         border-bottom: 45px solid black;
         
         @include lgSize{
-            width: auto;
-            height: 70vh;
             border: 5px solid black;
             &::before,
             &::after{
@@ -30,11 +27,9 @@
             }
         }
         
-        
         .squareImg{
             width: 100%;
             height: 100%;
-            object-fit: contain;
         }
         
         &::before{
@@ -50,12 +45,14 @@
 }
 
 .screen[data-mobile="false"]{
-    width: 95%;
+    width: 40rem;
     border: 10px solid black;
-    
+    margin-inline: auto;
+
     @include lgSize{
-        height: 100%;
+        width: 30rem;
     }
+
     @include mdSize{
         width: min(72vw, 100%);
         height: 15rem;
@@ -77,10 +74,6 @@
     .squareImg{
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        @include mdSize{
-            object-fit: cover;
-        }
     }
     
     &::before{

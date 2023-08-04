@@ -12,6 +12,7 @@ $paddingLeft: 1rem;
   align-items: center;
   border-radius: 10px;
   overflow-x: hidden;
+  row-gap: 1rem;
 
   background: rgba(255, 248, 248, 0.093);
   box-shadow: 0 8px 32px 0 rgba(26, 26, 26, 0.37);
@@ -23,7 +24,6 @@ $paddingLeft: 1rem;
   @include lgSize {
     width: 95vw;
     height: 90vh;
-    row-gap: 1rem;
   }
   @include mdSize {
     width: 100vw;
