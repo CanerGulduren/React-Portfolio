@@ -7,17 +7,18 @@
         flex-direction: column-reverse;
     }
 
-    .screen{
-        border-radius: 10px;
-        position: relative;
-        filter: drop-shadow(0 0 .5rem black);
+    .mainImg{
+        width: 100%;
+        height: 100%;
     }
     
-    .screen[data-mobile="true"]{
+    .mobileSlider{
         width: 15rem;
         height: 30rem;
         border: 10px solid black;
         border-bottom: 45px solid black;
+        border-radius: 5px;
+        position: relative;
         
         @include lgSize{
             border: 5px solid black;
@@ -27,7 +28,7 @@
             }
         }
         
-        .squareImg{
+        .mainImg{
             width: 100%;
             height: 100%;
         }
@@ -44,10 +45,13 @@
     }
 }
 
-.screen[data-mobile="false"]{
-    width: 40rem;
+.desktopSlider{
+    width: 85%;
+    height: 100%;
     border: 10px solid black;
+    border-radius: 6px;
     margin-inline: auto;
+    position: relative;
 
     @include lgSize{
         width: 30rem;
@@ -69,11 +73,6 @@
     @include smSize{
         width: 90%;
         height: 14rem;
-    }
-      
-    .squareImg{
-        width: 100%;
-        height: 100%;
     }
     
     &::before{

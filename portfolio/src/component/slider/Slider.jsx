@@ -42,8 +42,8 @@ function SliderBtn({ styleName }) {
     initial= {{opacity: 0}}
     animate= {{scale: [0, 1], opacity: 1}}
     transition= {{
-      duration: .4,
-      delay: .6
+      duration: .3,
+      delay: .4
     }}
     >
       <motion.div
