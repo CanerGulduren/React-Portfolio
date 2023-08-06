@@ -8,13 +8,17 @@
 }
 
 body{
-    background: url("../../public/BG.jpg");
+    background: url("../../public/bgLarge.webp");
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
     height: 100vh;
     display: grid;
     place-items: center;
+
+    @include mdSize{
+        background: url("../../public/bgSmall.webp");
+    }
 }
 
 img,
