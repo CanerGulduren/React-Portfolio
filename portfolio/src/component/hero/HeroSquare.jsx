@@ -1,6 +1,6 @@
 import React from "react";
 import style from "@/style/component/Hero.module.scss";
-import heroImg from "../../../public/caner.png";
+import heroImg from "../../../public/caner.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

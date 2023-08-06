@@ -7,8 +7,8 @@ const projectData = [
       "I created the website within the given timeframe, and the customer was satisfied with the outcome. Through this experience, I learned a lot about communicating with clients, problem-solving, and time management.",
     link: "https://giraydesign.com/",
     linkTitle: "Visit Website",
-    desktopImg: "/projectImages/girayDesktop.png",
-    mobileImg: "/projectImages/girayMobile.png",
+    desktopImg: "/projectImages/girayDesktop.webp",
+    mobileImg: "/projectImages/girayMobile.webp",
   },
   {
     title: "Music Player",
@@ -16,8 +16,8 @@ const projectData = [
     description2: "Through this project, I honed my skills in user interface design, frontend development, and creating a seamless user experience. It was a fulfilling experience to combine my passion for music with my newfound software development skills.",
     link: "https://github.com/CanerGulduren/Music-Player",
     linkTitle: "View source code", 
-    desktopImg: "/projectImages/musicDesktop.png",
-    mobileImg: "/projectImages/musicMobile.png",
+    desktopImg: "/projectImages/musicDesktop.webp",
+    mobileImg: "/projectImages/musicMobile.webp",
   },
   {
     title: "Discord Website Clone",
@@ -25,8 +25,8 @@ const projectData = [
     description2: "By taking on this project, I aimed to challenge myself and further develop my skills in responsive design, animation, and creating visually captivating user interfaces.",
     link: "https://github.com/CanerGulduren/Discord-Website-Clone",
     linkTitle: "View source code",
-    desktopImg: "/projectImages/discordDesktop.png",
-    mobileImg: "/projectImages/discordMobile.png",
+    desktopImg: "/projectImages/discordDesktop.webp",
+    mobileImg: "/projectImages/discordMobile.webp",
   },
   {
     title: "Advanced To Do App",
@@ -34,16 +34,16 @@ const projectData = [
     description2: "I didn't overlook it either, and I built an advanced to-do app that I can use in my daily life.",
     link: "https://github.com/CanerGulduren/Advanced-Todo-App",
     linkTitle: "View source code",
-    desktopImg: "/projectImages/todoDesktop.png",
-    mobileImg: "/projectImages/todoMobile.png",
+    desktopImg: "/projectImages/todoDesktop.webp",
+    mobileImg: "/projectImages/todoMobile.webp",
   },
   {
     title: "Memory Card Game",
     description1: "This project has imparted upon me the invaluable lesson of the utmost importance in crafting code that remains timeless, effortlessly maintainable, and readily understandable to programmers of all skill levels, be they novices or seasoned professionals.",
     link: "https://github.com/CanerGulduren/Memory-Card-Game",
     linkTitle: "View source code",
-    desktopImg: "/projectImages/memoryDesktop.png",
-    mobileImg: "/projectImages/memoryMobile.png",
+    desktopImg: "/projectImages/memoryDesktop.webp",
+    mobileImg: "/projectImages/memoryMobile.webp",
   },
 ];
 
