@@ -46,8 +46,8 @@
 }
 
 .desktopSlider{
-    width: 85%;
-    height: 100%;
+    width: 40rem;
+    height: 20rem;
     border: 10px solid black;
     border-radius: 6px;
     margin-inline: auto;
@@ -55,6 +55,7 @@
 
     @include lgSize{
         width: 30rem;
+        height: 15rem;
     }
 
     @include mdSize{
