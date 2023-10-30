@@ -8,7 +8,7 @@ const projectData = [
     link: "https://github.com/CanerGulduren/Blog-website-MERN",
     linkTitle: "View source code",
     desktopImg: "/projectImages/BlogWebsiteMERN.png",
-    mobileImg: "/projectImages/girayMobile.webp",
+    mobileImg: "/projectImages/blogWebsiteMobile.png",
   },
   {
     title: "GirayDesign",
