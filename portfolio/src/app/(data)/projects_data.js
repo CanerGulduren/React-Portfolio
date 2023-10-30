@@ -1,5 +1,16 @@
 const projectData = [
   {
+    title: "Sultanım",
+    description1:
+      "A blog website that saves the blog posts written by authors to a MongoDB database and dynamically presents these posts to the user, using a combination of frontend and backend technologies. The website primarily provides information about pet birds, especially parrots. ",
+    description2:
+      "The project has helped me better understand the communication between frontend and backend, get to know powerful backend frameworks like Express.js more closely, and learn about database communication.",
+    link: "https://github.com/CanerGulduren/Blog-website-MERN",
+    linkTitle: "View source code",
+    desktopImg: "/projectImages/BlogWebsiteMERN.png",
+    mobileImg: "/projectImages/girayMobile.webp",
+  },
+  {
     title: "GirayDesign",
     description1:
       "The customer asked me to create a website using Ikass, an e-commerce-based Content Management System, which I had never used before. However, due to my quick learning abilities, adaptability, and confidence in myself, I convinced the customer that I could handle the job.",
